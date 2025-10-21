@@ -2,48 +2,43 @@ import numpy as np
 import math as math #I was getting a warning that numpy.math.factorial was going to be removed in the future. This is what google told me to do so it doesn't break in the future. math.factorial()
 
 
-def f(x):
-    y=np.sin(x)
+def factorial(n):
+    y=math.factorial(n)
     return y
-
-def g(x):
-    y=np.cos(x)
-    return y
-
-def factorial(x):
-    y=math.factorial(x)
-    return y
-
-
 a=0
+x=2
+nmax=14
+y=np.sin(a)
 
-n=0
-nmax=100
-tol = 0.0001
+for n in range(nmax):
+    if n==0 or n==4 or n==8 or n==12:
+        def function(a):
+            y=np.cos(a)
+            return y
+    elif n==1 or n==5 or n==9 or n==13:
+        def function(a):
+            y=-np.sin(a)
+            return y
+    elif n==2 or n==6 or n==10:
+        def function(a):
+            y=-np.cos(a)
+            return y
+    else:
+        def function(a):
+            y=np.sin(a)
+            return y
+    z=(function(a)/factorial(n+1))*(x-a)**(n+1)
+    y+=z
+    print(y)
 
-p = float(input("give a number, p "))
-
-def tyalor_sin(x):
-    nmax=15
-    y=f(a)
-    for n in range(nmax):
-        
-    y=f(a)+(g(a)/factorial(1))(x-a)+ 
+print(np.sin(2))
 
 
 
 
-if f(p)==0:
-    print("good guess")
-else:
-    while abs(f(p)) > tol and n < nmax:
-        p=p-(f(p)/g(p))
-        n+=1
-        print(p,n)
 
 
-    print(p)
+
     
-     
 
 
