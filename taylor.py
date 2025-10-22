@@ -6,38 +6,32 @@ def factorial(n):
     y=math.factorial(n)
     return y
 a=0
-x=2
 nmax=14
-y=np.sin(a)
+g=np.sin(a)
+x=-10
+i=0
+while x<10:
 
-for n in range(nmax):
-    if n==0 or n==4 or n==8 or n==12:
-        def function(a):
+    for n in range(nmax):
+        if n==0 or n==4 or n==8 or n==12:
             y=np.cos(a)
-            return y
-    elif n==1 or n==5 or n==9 or n==13:
-        def function(a):
+       
+        elif n==1 or n==5 or n==9 or n==13:
             y=-np.sin(a)
-            return y
-    elif n==2 or n==6 or n==10:
-        def function(a):
+     
+        elif n==2 or n==6 or n==10:
             y=-np.cos(a)
-            return y
-    else:
-        def function(a):
+
+        else:
             y=np.sin(a)
-            return y
-    z=(function(a)/factorial(n+1))*(x-a)**(n+1)
-    y+=z
-    print(y)
-
-print(np.sin(2))
-
-
-
-
-
-
+     
+        z=(y/factorial(n+1))*(x-a)**(n+1)
+        g+=z
+        print(g)
+        print("The actual value is {}".format(np.sin(x)))
+    x += 0.1
+    i += 1
+    print(i)
 
     
 
